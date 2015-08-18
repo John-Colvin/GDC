@@ -28,6 +28,6 @@ before_script:
 script:
  - ./setup-gcc.sh ../gcc-6-20150719
  - mkdir ../objdir
- - cd ,./objdir
+ - cd ../objdir
  - ../gcc-6-20150719/configure --enable-languages=d --disable-bootstrap --prefix=/opt/gdc --with-bugurl="http://bugzilla.gdcproject.org" --enable-checking=yes
  - make -j2
