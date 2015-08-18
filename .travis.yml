@@ -24,6 +24,7 @@ before_script:
  - wget http://mirrors-uk.hotimportnights.com/gcc/snapshots/6-20150719/gcc-6-20150719.tar.bz2
  - tar -xf gcc-6-20150719.tar.bz2
  - cd dev
+ - ls
 
 script:
  - ./setup-gcc.sh ../gcc-6-20150719
