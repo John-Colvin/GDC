@@ -1,0 +1,29 @@
+sudo: false
+
+addons:
+  apt:
+    packages:
+     - gcc
+     - g++
+     - libmpc-dev
+     - libmpfr-dev
+     - libgmp3-dev
+     - automake
+     - autoconf
+     - flex
+     - bison
+     - patch
+     - git
+
+before_script:
+ - mkdir dev
+ - wget http://mirrors-uk.hotimportnights.com/gcc/snapshots/6-20150719/gcc-6-20150719.tar.bz2
+ - tar -xf gcc-6-20150719.tar.bz2
+ - cd dev
+
+script:
+ - ./setup-gcc.sh ../gcc-6-20150719
+ - mkdir ../objdir
+ - cd ,./objdir
+ - ../gcc-6-20150719/configure --enable-languages=d --disable-bootstrap --prefix=/opt/gdc --with-bugurl="http://bugzilla.gdcproject.org" --enable-checking=yes
+ - make -j2
