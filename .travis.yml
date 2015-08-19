@@ -22,8 +22,8 @@ install:
  - if [ $TRAVIS_OS_NAME == osx ];
    then
      brew update;
-     brew upgrade --all;
-     brew install libmpc mpfr gmp automake autoconf flex bison;
+     brew upgrade --all --quiet;
+     brew install libmpc mpfr gmp automake autoconf flex bison --quiet;
    fi
 
 cache:
