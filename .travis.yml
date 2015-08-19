@@ -24,8 +24,12 @@ install:
    then
      brew update;
      brew upgrade --all;
-     brew install libmpc mpfr gmp automake autoconf flex bison patch;
+     brew install libmpc mpfr gmp automake autoconf flex bison;
    fi
+
+cache:
+  directories:
+   - /usr/local
 
 before_script:
  - cd ..
