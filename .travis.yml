@@ -46,4 +46,4 @@ script:
  - mkdir ../objdir
  - cd ../objdir
  - ../gcc-6-20150719/configure --enable-languages=d --disable-bootstrap --prefix=/opt/gdc --with-bugurl="http://bugzilla.gdcproject.org" --enable-checking=yes --disable-multilib
- - make -j2
+ - make -j2 > build.log
