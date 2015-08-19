@@ -1,5 +1,9 @@
 sudo: false
 
+os:
+ - linux
+ - osx
+
 addons:
   apt:
     packages:
@@ -16,11 +20,11 @@ addons:
      - git
 
 install:
- - if [ $TRAVIS_OS_NAME == osx ]
+ - if [ $TRAVIS_OS_NAME == osx ];
    then
      brew update
-     brew install libmpc mpfr gmp automake autoconf flex bison patch
-   done
+     brew install libmpc mpfr gmp automake autoconf flex bison patch;
+   fi
 
 before_script:
  - cd ..
