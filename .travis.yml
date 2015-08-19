@@ -15,6 +15,13 @@ addons:
      - patch
      - git
 
+install:
+ - if [ $TRAVIS_OS_NAME == osx ]
+   then
+     brew update
+     brew install libmpc mpfr gmp automake autoconf flex bison patch
+   done
+
 before_script:
  - cd ..
  - mv GDC GDC_tmp
